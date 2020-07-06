@@ -6,12 +6,12 @@ import {DateTime} from 'luxon';
 const Clock = () => {
     const dateTime = DateTime.local().setLocale("nb-NO");
 
-    console.log(DateTime.TIME_24_SIMPLE);
+    console.log(DateTime.DATETIME_FULL_WITH_SECONDS);
 
     return (
     <div className="Clock">
         <h1 className="time">
-            {dateTime.toLocaleString(DateTime.TIME_24_SIMPLE)}
+            {dateTime.toLocaleString(DateTime.DATETIME_FULL_WITH_SECONDS)}
         </h1>
         <h1 className="date">
             {dateTime.toLocaleString({
